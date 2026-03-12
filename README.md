@@ -1,10 +1,12 @@
 CREDIT CARD FRAUD DETECTION DASHBOARD:
+
 Machine learning prototype to detect fraudulent credit card transactions.
 
 Models Used:
 Logistic Regression
 Decision Tree
 Random Forest
+
 
 Random Forest performed best with:
 Precision: 0.88
