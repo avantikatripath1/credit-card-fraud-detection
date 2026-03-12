@@ -140,29 +140,35 @@ with col_right:
 
     st.header("Feature PCA Panel")
 
-    st.write("Manual overrides:")
-
-    st.number_input(
-        "Scaled Amount",
-        key="scaled_amount",
-        step=0.1
+    st.caption(
+        "These PCA features are anonymized components of the original transaction data. "
+        "Manual adjustments are for experimentation and may not represent realistic transactions."
     )
 
-    st.number_input(
-        "Scaled Time",
-        key="scaled_time",
-        step=0.1
-    )
-
-    st.divider()
-
-    for i in range(1,29):
+    # 👇 Collapsible advanced controls
+    with st.expander("Advanced: Manual PCA Feature Controls"):
 
         st.number_input(
-            f"V{i}",
-            key=f"V{i}",
+            "Scaled Amount",
+            key="scaled_amount",
             step=0.1
         )
+
+        st.number_input(
+            "Scaled Time",
+            key="scaled_time",
+            step=0.1
+        )
+
+        st.divider()
+
+        for i in range(1,29):
+
+            st.number_input(
+                f"V{i}",
+                key=f"V{i}",
+                step=0.1
+            )
 
 # ----------------------------
 # CENTER PANEL
